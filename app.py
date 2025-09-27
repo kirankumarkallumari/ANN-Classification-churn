@@ -19,7 +19,7 @@ with open('scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
 # Streamlit UI
-st.title("Customer fucking Churn Prediction")
+st.title("Customer Churn Prediction")
 st.sidebar.header("Input Customer Data")
 
 credit_score = st.sidebar.number_input("Credit Score", min_value=0, max_value=1000, value=600)
@@ -88,3 +88,4 @@ if st.button("Predict Churn"):
         st.write("⚠️ The customer is likely to churn.")
     else:
         st.write("✅ The customer is not likely to churn.")
+
